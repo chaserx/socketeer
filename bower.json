@@ -1,0 +1,23 @@
+{
+  "name": "socketeer",
+  "version": "0.0.1",
+  "authors": [
+    "Chase Southard <chase.southard@gmail.com>"
+  ],
+  "description": "socketio plaything",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
