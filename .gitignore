@@ -1,4 +1,6 @@
 .DS_Store
+.sass-cache/
+
 # Logs
 logs
 *.log
@@ -25,4 +27,5 @@ build/Release
 
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
-node_modules
+node_modules/
+bower_components/
