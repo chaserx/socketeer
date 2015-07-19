@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socketeer</title>
+    <link type="text/css" rel="stylesheet" href="static/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="static/jquery/dist/jquery.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s6 offset-s3">
+            <h1 class="center-align"><i class="fa fa-rocket"></i> Socketeer</h1>
+            <div id="terminal" class="row s6">
+              <ul id="messages"></ul>
+            </div>
+            <div class="row" id="caret">
+              <form action="" class="col s12">
+                <div class="input-field s12">
+                  <i class="fa fa-angle-right prefix"></i>
+                  <input id="m" autocomplete="off" type="text" autofocus />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col s6 offset-s3 center-align">
+            <a href="https://github.com/chaserx/socketeer"><i class="fa fa-github"></i> view source</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="static/js/terminal.js"></script>
+  </body>
+</html>
