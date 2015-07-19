@@ -11,8 +11,21 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
+    respond(msg);
   });
 });
+
+function sendMessage(i) {
+  setTimeout(function() { io.emit('chat message', i+'...'); }.bind(i), 1000);
+};
+
+function respond(msg) {
+  if (msg === 'countdown') {
+    for (var i=10; i >= 0; i--) {
+      sendMessage(i);
+    };
+  }
+};
 
 http.listen(3000, function(){
   console.log('listening on *:3000');
