@@ -14,6 +14,8 @@ gulp.task('jshint', function() {
 gulp.task('watch', function() {
   gulp.watch('app.js', ['jshint']);
   gulp.watch('source/**/*.html', ['html'])
+  gulp.watch('source/**/*.css', ['css'])
+  gulp.watch('source/**/*.js', ['js'])
 });
 
 gulp.task('liveserver', function() {
@@ -38,8 +40,20 @@ gulp.task('transport_bower_libs', function(){
   }).pipe(gulp.dest('dist/bower_components/'));
 });
 
+gulp.task('css', function(){
+  gulp.src('source/**/*.css').pipe(gulp.dest('dist'));
+});
+
+gulp.task('js', function(){
+  gulp.src('source/**/*.js').pipe(gulp.dest('dist'));
+});
+
+gulp.task('audio', function(){
+  gulp.src('source/**/*.m4a').pipe(gulp.dest('dist'));
+});
+
 gulp.task('html', function(){
   gulp.src('source/**/*.html').pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['transport_bower_libs', 'html', 'watch', 'liveserver']);
+gulp.task('default', ['transport_bower_libs', 'audio', 'css', 'js', 'html', 'watch', 'liveserver']);

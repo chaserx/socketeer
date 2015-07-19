@@ -1,0 +1,28 @@
+body { background-color: #eee; }
+.container {
+  background-color: #eee;
+}
+#terminal {
+  background-color: #000;
+  height: 400px;
+  overflow: scroll
+}
+#messages {
+  font-family: monospace;
+  background-color: black;
+  color: green;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#messages li { padding: 5px 10px; }
+#messages li:nth-child(odd) { background: rgba(255, 255, 255, 0.15); }
+#caret {
+  background-color: #000;
+  color: green;
+  border-top: 1px solid #000;
+}
+
+.input-field .prefix {
+  font-size: 3rem !important;
+}

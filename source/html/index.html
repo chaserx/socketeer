@@ -2,33 +2,22 @@
 <html>
   <head>
     <title>Socketeer</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { background-color: #eee; }
-      #messages { font-family: monospace; background-color: black; color: green; list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: rgba(255, 255, 255, 0.15); }
-      .input-field .prefix {
-        font-size: 3rem !important;
-      }
-    </style>
-    <link type="text/css" rel="stylesheet" href="materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="static/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="jquery/dist/jquery.js"></script>
+    <script src="static/jquery/dist/jquery.js"></script>
   </head>
   <body>
     <header></header>
     <main>
       <div class="container">
         <div class="row">
-          <div class="col s12">&nbsp;</div>
-        </div>
-        <div class="row">
-          <div class="col s6" style="background-color: #eee;">
-            <div id="msg-container" class="row s6" style="background-color: #000; height: 400px; overflow: scroll">
+          <div class="col s6 offset-s3">
+            <h1 class="center-align"><i class="fa fa-rocket"></i> Socketeer</h1>
+            <div id="terminal" class="row s6">
               <ul id="messages"></ul>
             </div>
-            <div class="row" style="background-color: #000; color: green; border-top: 1px solid #000">
+            <div class="row" id="caret">
               <form action="" class="col s12">
                 <div class="input-field s12">
                   <i class="fa fa-angle-right prefix"></i>
@@ -37,34 +26,20 @@
               </form>
             </div>
           </div>
-          <div class="col s6" style="border: 1px solid #f00">
-            <p style="font-weight: bold;"><strong>Socketeer</strong></p>
-          </div>
         </div>
       </div>
     </main>
     <footer>
       <div class="container">
-        &copy; 2015 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">Github</a>
+        <div class="row">
+          <div class="col s6 offset-s3 center-align">
+            <a href="https://github.com/chaserx/socketeer"><i class="fa fa-github"></i> view source</a>
+          </div>
+        </div>
       </div>
     </footer>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-      $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
-        return false;
-      });
-      socket.on('chat message', function(msg){
-        var msgs = $('#messages')
-        msgs.append($('<li>').text(msg));
-        $('#msg-container').stop().animate({
-          scrollTop: $("#msg-container")[0].scrollHeight
-        }, 500);
-      });
-    </script>
+    <script src="static/js/terminal.js"></script>
   </body>
 </html>
