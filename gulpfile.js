@@ -13,6 +13,7 @@ gulp.task('jshint', function() {
 
 gulp.task('watch', function() {
   gulp.watch('app.js', ['jshint']);
+  gulp.watch('source/**/*.html', ['html'])
 });
 
 gulp.task('liveserver', function() {
@@ -31,4 +32,14 @@ gulp.task('liveserver', function() {
   })
 });
 
-gulp.task('default', ['watch', 'liveserver']);
+gulp.task('transport_bower_libs', function(){
+  gulp.src('bower_components/**/*', {
+    base: 'bower_components'
+  }).pipe(gulp.dest('dist/bower_components/'));
+});
+
+gulp.task('html', function(){
+  gulp.src('source/**/*.html').pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['transport_bower_libs', 'html', 'watch', 'liveserver']);
