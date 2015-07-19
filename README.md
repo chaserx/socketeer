@@ -2,11 +2,10 @@
 
 ### a socket.io plaything
 
-## Installation
-
-- `npm install`
+![screenshot](https://raw.githubusercontent.com/chaserx/socketeer/master/screenshot.png)
 
 ## Develop locally
 
-`gulp`
+    npm install
+    gulp
 
