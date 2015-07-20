@@ -22,7 +22,7 @@
     "jshint-stylish": "^2.0.1"
   },
   "scripts": {
-    "postinstall": "bower cache clean && bower install"
+    "postinstall": "./node_modules/bower/bin/bower cache clean && ./node_modules/bower/bin/bower install"
   },
   "author": "Chase Southard",
   "license": "MIT"
