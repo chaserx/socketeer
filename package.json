@@ -16,7 +16,7 @@
     "bower": "^1.8.14",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
-    "gulp-livereload": "^3.8.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-nodemon": "^2.0.3",
     "gulp-notify": "^2.2.0",
     "jshint-stylish": "^2.0.1"
