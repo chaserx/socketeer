@@ -4,16 +4,16 @@
   "description": "socketio plaything",
   "main": "app.js",
   "engines": {
-    "node": "0.12.x",
-    "npm": "2.11.x"
+    "node": "18.12.0",
+    "npm": "8.19.2"
   },
   "dependencies": {
-    "express": "^4.13.1",
-    "socket.io": "^1.3.6",
-    "bower": "^1.4.1"
+    "express": "^4.18.2",
+    "socket.io": "^4.5.4",
+    "bower": "^1.8.14"
   },
   "devDependencies": {
-    "bower": "^1.4.1",
+    "bower": "^1.8.14",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
