@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "bower": "^1.8.14",
-    "gulp": "^3.9.0",
-    "gulp-jshint": "^1.11.2",
+    "gulp": "^4.0.2",
+    "gulp-jshint": "^2.1.0",
     "gulp-livereload": "^3.8.0",
     "gulp-nodemon": "^2.0.3",
     "gulp-notify": "^2.2.0",
